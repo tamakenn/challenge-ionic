@@ -15,23 +15,23 @@
 
   <div class="ion-padding">
     <ion-item>
-      <ion-label position="floating">NIK</ion-label>
-      <ion-input type="number" placeholder="Input Data" [(ngModel)]="form.nik"></ion-input>
+      <ion-label position="floating">Nomor Induk Keluarga</ion-label>
+      <ion-input type="number" placeholder="Nomor Induk Keluarga" [(ngModel)]="form.nik"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label position="floating">Nama</ion-label>
-      <ion-input type="text" placeholder="Input Data" [(ngModel)]="form.nama"></ion-input>
+      <ion-label position="floating">Nama Lengkap</ion-label>
+      <ion-input type="text" placeholder="Nama Lengkap" [(ngModel)]="form.nama"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Tempat Lahir</ion-label>
-      <ion-input type="text" placeholder="Input Data" [(ngModel)]="form.tempat_lahir"></ion-input>
+      <ion-input type="text" placeholder="Tempat Lahir" [(ngModel)]="form.tempat_lahir"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Tanggal Lahir</ion-label>
-      <ion-input type="date" placeholder="Input Data" [(ngModel)]="form.tanggal_lahir"></ion-input>
+      <ion-input type="date" placeholder="Tanggal Lahir" [(ngModel)]="form.tanggal_lahir"></ion-input>
     </ion-item>
 
     <ion-item>
@@ -44,7 +44,7 @@
 
     <ion-item>
       <ion-label position="floating">Alamat</ion-label>
-      <ion-input type="text" placeholder="Input Data" [(ngModel)]="form.alamat"></ion-input>
+      <ion-input type="text" placeholder="Alamat" [(ngModel)]="form.alamat"></ion-input>
     </ion-item>
 
     <ion-item>
@@ -71,7 +71,7 @@
 
     <ion-item>
       <ion-label position="floating">Pekerjaan</ion-label>
-      <ion-input type="text" placeholder="Input Data" [(ngModel)]="form.pekerjaan"></ion-input>
+      <ion-input type="text" placeholder="Pekerjaan" [(ngModel)]="form.pekerjaan"></ion-input>
     </ion-item>
 
     <ion-item>
@@ -84,25 +84,27 @@
 
     <ion-item>
       <ion-label position="floating">Berlaku Hingga</ion-label>
-      <ion-input type="date" placeholder="Input Data" [(ngModel)]="form.berlaku_hingga"></ion-input>
+      <ion-select [(ngModel)]="form.berlaku_hingga">
+        <ion-select-option value="berlaku">Seumur Hidup</ion-select-option>
+      </ion-select>
     </ion-item>
 
     <br>
     <!-- send button -->
-    <ion-button expand="block" (click)="sendToWhatsapp()">
-      <ion-icon name="send"></ion-icon>&nbsp;
+    <ion-button color="success" expand="block" (click)="sendToWhatsapp()">
+      <ion-icon name="logo-whatsapp"></ion-icon>&nbsp;
       Send To WhatsApp
     </ion-button>
 
     <!-- send to telegram button -->
-    <ion-button expand="block" (click)="sendToTelegram()">
+    <ion-button color="primary" expand="block" (click)="sendToTelegram()">
       <ion-icon name="send"></ion-icon>&nbsp;
       Send To Telegram
     </ion-button>
 
     <!-- send to email button -->
-    <ion-button expand="block" (click)="sendToEmail()">
-      <ion-icon name="send"></ion-icon>&nbsp;
+    <ion-button color="danger" expand="block" (click)="sendToEmail()">
+      <ion-icon name="mail"></ion-icon>&nbsp;
       Send To Email
     </ion-button>
   </div>

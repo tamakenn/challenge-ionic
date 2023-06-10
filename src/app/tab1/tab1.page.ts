@@ -24,7 +24,7 @@ export class Tab1Page {
       !this.form.kewarganegaraan || !this.form.berlaku_hingga
     ) {
       this.toastController.create({
-        message: 'Mohon lengkapi data',
+        message: 'Data tidak boleh kosong!',
         duration: 2000,
         color: 'danger'
       }).then(toast => toast.present());
@@ -48,7 +48,7 @@ export class Tab1Page {
       return `*${key.toUpperCase()}*: ${this.form[key]}`;
     }).join('%0A');
 
-    window.open(`https://api.whatsapp.com/send?phone=6281319338601&text=${output}`, '_blank');
+    window.open(`https://api.whatsapp.com/send?phone=6281317053724&text=${output}`, '_blank');
 
     // save data to storage
     this.storageManagementService.addData(this.form);
@@ -88,7 +88,7 @@ export class Tab1Page {
       return `${key.toUpperCase()}: ${this.form[key]}`;
     }).join('%0A');
 
-    const url = `mailto:naufalfaqih443@gmail.com?subject=Data&20Informasi&body=${output}`;
+    const url = `mailto:haristr217@gmail.com?subject=Data&20Informasi&body=${output}`;
 
     window.open(url, '_blank');
 
